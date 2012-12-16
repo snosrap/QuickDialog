@@ -286,7 +286,7 @@
     QPickerElement *simplePickerEl =
         [[QPickerElement alloc] initWithTitle:@"Key"
                                         items:[NSArray arrayWithObjects:component1, component2, nil]
-                                        value:@"3 B"];
+                                        value:@"3\tB"];
     simplePickerEl.onValueChanged = ^{ NSLog(@"Selected indexes: %@", [simplePickerEl.selectedIndexes componentsJoinedByString:@","]); };
     
     [simplePickerSection addElement:simplePickerEl];
