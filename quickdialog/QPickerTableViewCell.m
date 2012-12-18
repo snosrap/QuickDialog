@@ -36,6 +36,14 @@ NSString * const QPickerTableViewCellIdentifier = @"QPickerTableViewCell";
     _textField.hidden = YES;
 }
 
+- (void)layoutSubviews
+{
+    if(self.detailTextLabel.text.length == 0)
+        self.detailTextLabel.text = @" ";
+
+    [super layoutSubviews];
+}
+
 - (QPickerElement *)pickerElement
 {
     return (QPickerElement *)_entryElement;
